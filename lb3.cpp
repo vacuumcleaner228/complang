@@ -37,11 +37,18 @@ double getValue()
     {
         double i;
         cin >> i;
-        if (cin.fail())
+        if ((cin.fail()) || (i < 0))
         {
+            if (cin.fail())
+            {
                 cin.clear();
                 cin.ignore(32767, '\n');
                 cout << "i - число. \n";
+            }
+            else
+            {
+                cout << "Данное значение не может быть меньше 0. \n";
+            }
         }
         else
         {
