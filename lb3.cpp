@@ -105,10 +105,6 @@ int main()
     for (int k = 0; k < i; k++)
     {
         exceptation += numbers[k] * probabilities[k];
-    }
-
-    for (int k = 0; k < i; k++)
-    {
         exceptation_square += numbers[k] * numbers[k] * probabilities[k];
     }
 
