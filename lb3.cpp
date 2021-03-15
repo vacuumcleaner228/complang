@@ -43,7 +43,7 @@ double getValue()
             {
                 cin.clear();
                 cin.ignore(32767, '\n');
-                cout << "i - число. \n";
+                cout << "E - число. \n";
             }
             else
             {
