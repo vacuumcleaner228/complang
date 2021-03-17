@@ -99,13 +99,23 @@ int main()
     }
 
     double *probabilities = new double[i];
+    double prob_sum = 0;
 
-    for (int k = 0; k < i; k++)
-    {
-        cout << "Вероятность P_" << k + 1 << ": ";
-        probabilities[k] = getProbability();
-    }
-    
+    do {
+        for (int k = 0; k < i; k++)
+        {
+            cout << "Вероятность P_" << k + 1 << ": ";
+            probabilities[k] = getProbability();
+            prob_sum += probabilities[k];
+        }
+
+        if (prob_sum != 1)
+        {
+            cout << "Ваша сумма вероятностей равна: " << prob_sum << ". Введите такие значения p, чтобы сумма вероятностей была равна 1 \n";
+            prob_sum = 0;
+        }
+    } while (prob_sum != 1);
+
     double exceptation = 0;
     double exceptation_square = 0;
 
