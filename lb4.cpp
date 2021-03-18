@@ -17,7 +17,10 @@ double getValue()
                 cin.ignore(32767, '\n');
                 cout << "n - число. \n";
             }
-            else cout << "n не может быть меньше 0. \n";
+            else
+            {
+                cout << "n не может быть меньше 0. \n";
+            }
         }
         else
         {
