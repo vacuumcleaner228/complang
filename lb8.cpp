@@ -1,6 +1,8 @@
 ﻿#include <iostream>
 #include <math.h>
 
+#define PI 3.14159265
+
 using namespace std;
 
 class MyClass
@@ -16,9 +18,10 @@ public:
 
     void getTrigonometricForm()
     {
-        double p = abs(sqrt(x * x + y * y));
+        double angle = atan(y / x)*180.0/PI;
+        double p = sqrt(x * x + y * y);
         cout << "Тригонометрическая форма числа z:\n";
-        cout << "z = " << p << "(" << cos(x / p) << " + i(" << sin(y / p) << "))";
+        cout << "z = " << p << "(cos(" << angle << "°) + isin(" << angle << "°))";
     }
 };
 
